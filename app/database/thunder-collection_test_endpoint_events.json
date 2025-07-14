@@ -1,0 +1,23 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "test_endpoint_events",
+    "collectionId": "d3d454c2-a21b-4b83-bcbc-b56513ac6602",
+    "dateExported": "2025-07-14T15:39:22.620Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1c4bfd34-b541-4d40-bb38-62d0ded93609",
+            "colId": "d3d454c2-a21b-4b83-bcbc-b56513ac6602",
+            "containerId": "",
+            "name": "http://localhost:3000/events",
+            "url": "http://localhost:3000/events",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-07-14T15:38:26.227Z",
+            "modified": "2025-07-14T15:38:26.227Z",
+            "headers": []
+        }
+    ],
+    "ref": "qbRGmnP51bTVZ5kq9csSkHmmdXflkPA_4DmYpCGButhtRqz8vgy_Bh6YufVoDqvhOD_VeoNbLzh9MUjs-vK-kg"
+}
