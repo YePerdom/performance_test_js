@@ -20,7 +20,7 @@ export async function login() {
             const user = users[0];
             localStorage.setItem("user", JSON.stringify(user));
             localStorage.setItem("isAuth", true);
-            alert(`!Hola, ${user.name}`);
+            alert(`¡Hola, ${user.name}!`);
             location.pathname = "/dashboard";
         } catch (error) {
             console.log(error);

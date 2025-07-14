@@ -14,7 +14,7 @@ export async function showVisitors() {
             <td>${event.capacity}</td>
             <td>${event.date}</td>
             <td>
-              <button onclick="recoverTask(${event.id}, this)">registrarse</button>
+              <button>registrarse</button>
             </td>
             `;
         tbody.appendChild(fila);
