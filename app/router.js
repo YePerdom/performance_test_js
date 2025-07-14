@@ -75,6 +75,9 @@ export async function renderRoute() {
         if (path === "/dashboard") {
             document.getElementById("header").hidden = false;
             
+            if(user.role === "VISITOR"){
+                showVisitors()
+            }
 
         }
     } catch (error) {
