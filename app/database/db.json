@@ -1,27 +1,57 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@expl.com",
+      "role": "ADMIN",
+      "password": "12345*",
+      "is_active": true
+    },
+    {
+      "id": "2",
+      "name": "visitor",
+      "email": "visitor@expl.com",
+      "role": "VISITOR",
+      "password": "12345*",
+      "is_active": true
+    }
+  ],
+  "events": [
+    {
+      "name": "evento_1",
+      "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      "date": "08-dec, 2025",
+      "capacity": 12,
+      "visitors": [],
+      "id": "cccc",
+      "is_active": true
+    },
         {
-            "id": 1,
-            "name": "admin",
-            "email": "admin@expl.com",
-            "password": "12345*"
-        },
+      "name": "evento_2",
+      "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      "date": "08-dec, 2025",
+      "capacity": 12,
+      "visitors": [],
+      "id": "ccscc",
+      "is_active": true
+    },    {
+      "name": "evento_3",
+      "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      "date": "08-dec, 2025",
+      "capacity": 12,
+      "visitors": [],
+      "id": "cccfc",
+      "is_active": true
+    },
         {
-            "id": 2,
-            "name": "visitor",
-            "email": "visitor@expl.com",
-            "password": "12345*"
-        }
-    ],
-    "events":[
-        {
-            "event": "evento_1",
-            "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
-            "date": "08-dec,2025",
-            "capacity": 12,
-            "visitors": [
-                
-            ]
-        }
-    ]
+      "name": "evento_4",
+      "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      "date": "08-dec, 2025",
+      "capacity": 12,
+      "visitors": [],
+      "id": "ccccs",
+      "is_active": true
+    }
+  ]
 }
