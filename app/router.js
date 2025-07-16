@@ -1,5 +1,5 @@
 import { login, signUp } from "./controllers/auth";
-import { showVisitors } from "./controllers/crudEvents";
+import { showVisitors, showAdmin } from "./controllers/crudEvents";
 
 const routes = {
     "/dashboard": "/app/views/home.html",
@@ -40,6 +40,13 @@ export async function renderRoute() {
         const html = await resp.text();
         app.innerHTML = html;
 
+        // event to clear localstorage items and redirect to login
+        document.getElementById("logoutBtn").addEventListener("click", () => {
+            localStorage.removeItem("user");
+            localStorage.removeItem("isAuth");
+            location.pathname = "/login"
+        });
+
         if (path === "/login") {
             //User atuentication, if user is not registered is not avilable to login.
             login();
@@ -48,40 +55,33 @@ export async function renderRoute() {
             document.getElementById("signUpBtn").addEventListener("click", () => {
                 location.pathname = "/register"
             });
-
-            // event to clear localstorage items and redirect to login
-            try {
-                document.getElementById("logoutBtn").addEventListener("click", () => {
-                    localStorage.removeItem("user");
-                    localStorage.removeItem("isAuth");
-                    location.pathname = "/login"
-                })
-            } catch (error) {
-                console.log(error)
-            }
         }
+
 
         if (path === "/register") {
             // User register
             signUp();
 
-            document.getElementById("cancelBtn").addEventListener("click", (e) => {
-                window.onload = e.preventDefault();
+            document.getElementById("cancelBtn").addEventListener("click", function (e) {
+                e.preventDefault();
                 location.pathname = "/login"
-            })
+            });
 
         }
 
         if (path === "/dashboard") {
             document.getElementById("header").hidden = false;
-            
-            if(user.role === "VISITOR"){
-                showVisitors()
+
+            if (user.role === "VISITOR") {
+                showVisitors();
+            }
+
+            if(user.role === "ADMIN"){
+                showAdmin();
             }
 
         }
     } catch (error) {
-        debugger
         console.log(error);
         location.href = "/noFound";
     }
